@@ -33,7 +33,8 @@ thermal_info:
 
 sensors:
      -  number:        1
-        location:     "Faceplate side of switch chip (U16)"
+#        location:     "Faceplate side of switch chip (U16)"
+        location:     "front"
         device:       tmp1
         sensor_type:  lm75
         alarm_thresholds:
@@ -55,7 +56,8 @@ sensors:
 
 
      -  number:        2
-        location:     "Fan side of switch chip near compute module (U6)"
+#        location:     "Fan side of switch chip near compute module (U6)"
+        location:     "back"
         device:       tmp2
         sensor_type:  lm75
         thresholds:
@@ -77,7 +79,8 @@ sensors:
               medium_off:           42.7
 
      -  number:        3
-        location:     "Near QSFP modules (U15)"
+#        location:     "Near QSFP modules (U15)"
+        location:     "side"
         device:       tmp3
         sensor_type:  lm75
         alarm_thresholds:
