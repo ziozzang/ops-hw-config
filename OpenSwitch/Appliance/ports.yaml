@@ -1,0 +1,69 @@
+# Copyright (C) 2014-2015 Hewlett-Packard Development Company, L.P.
+# All Rights Reserved.
+#
+#    Licensed under the Apache License, Version 2.0 (the "License"); you may
+#    not use this file except in compliance with the License. You may obtain
+#    a copy of the License at
+#
+#         http://www.apache.org/licenses/LICENSE-2.0
+#
+#    Unless required by applicable law or agreed to in writing, software
+#    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+#    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+#    License for the specific language governing permissions and limitations
+#    under the License.
+#
+#  Port Description File for Generic-x86 64bit Switch
+
+manufacturer:    OpenSwitch
+product_name:    OPS_Appliance
+version:         '1'
+
+port_info:
+    number_ports:    3
+    max_port_speed:  1000
+    max_transmission_unit: 1500
+    max_lag_count:         1024
+    max_lag_member_count:  256
+    L3_port_requires_internal_VLAN: False
+
+#  Import or reference devices.yaml file
+
+
+#  Note: We will need PHY information for future switches
+#        Should include an array of PHY descriptors
+#        and add info to port indicating the associated PHY
+
+ports:
+    -  name:             eth1
+       switch_device:      0
+       switch_device_port: 1
+       pluggable:          False
+       connector:          RJ45
+       max_speed:          1000
+       speeds:             [1000]  # supported speeds in Mb/S
+       capabilities:       [enet1G]
+       subports:           []
+       supported_modules:  [TBD]
+
+    -  name:             eth2
+       switch_device:      0
+       switch_device_port: 2
+       pluggable:          False
+       connector:          RJ45
+       max_speed:          1000
+       speeds:             [1000]  # supported speeds in Mb/S
+       capabilities:       [enet1G]
+       subports:           []
+       supported_modules:  [TBD]
+
+    -  name:             eth3
+       switch_device:      0
+       switch_device_port: 3
+       pluggable:          False
+       connector:          RJ45
+       max_speed:          1000
+       speeds:             [1000]  # supported speeds in Mb/S
+       capabilities:       [enet1G]
+       subports:           []
+       supported_modules:  [TBD]
