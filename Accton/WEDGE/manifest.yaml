@@ -1,0 +1,27 @@
+#  Hardward Description Manifest File for Accton WEDGE Switch
+
+# The manifest file (this file) is the one required file for a subsystem
+# and must be named "manifest.yaml".
+
+manufacturer:    Accton
+product_name:    WEDGE
+version:         '1'
+
+subsystem_info: |
+    The Accton WEDGE OCP whitebox switch by Facebook has the
+    following devices...
+    16x40G QSFP+ ports.
+
+# Each hw description file must be listed below else it won't be processed.
+# If a file is listed, and isn't present, it is considered an error.
+# If a daemon looks for a particular file, and it isn't listed, it is
+# consider not an error and indicates that this subsystem does not
+# have any of that type of h/w.
+
+files:
+    -   name:       manifest
+        filename:   manifest.yaml
+    -   name:       devices
+        filename:   devices.yaml
+    -   name:       ports
+        filename:   ports.yaml

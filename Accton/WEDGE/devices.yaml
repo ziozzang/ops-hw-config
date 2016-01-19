@@ -1,0 +1,351 @@
+#
+#  Devices Description File for Accton WEDGE Switch.
+#  Based on the AS6712/5712 description file.
+
+manufacturer:    Accton
+product_name:    WEDGE
+version:         '1'
+
+buses:
+    -   name:       i2c_0
+        dev_name:   /dev/i2c-1
+        smbus:      true
+    -   name:       i2c_1
+        dev_name:   /dev/i2c-2
+        smbus:      true
+
+devices:    # just device relevant to platform code are listed
+    -   name:       sodimm_ch0
+        bus:        i2c_0
+        dev_type:   sodimm_spd_eeprom
+        address:    0x52
+    -   name:       sodimm_ch1
+        bus:        i2c_0
+        dev_type:   sodimm_spd_eeprom
+        address:    0x53
+    -   name:       clkgen
+        bus:        i2c_0
+        dev_type:   clkgen
+        address:    0x69
+    -   name:       isl9027
+        bus:        i2c_0
+        dev_type:   potentmeter
+        address:    0x2E
+    -   name:       cpld1
+        bus:        i2c_0
+        dev_type:   cpld
+        address:    0x60
+    -   name:       cpld2
+        bus:        i2c_0
+        dev_type:   cpld
+        address:    0x62
+    -   name:       cpld3
+        bus:        i2c_0
+        dev_type:   cpld
+        address:    0x64
+    -   name:       qsfpp1
+        bus:        i2c_0
+        dev_type:   qsfpp
+        address:    0x50
+        pre:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0x00 ]
+        post:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0xFF ]
+    -   name:       qsfpp2
+        bus:        i2c_0
+        dev_type:   qsfpp
+        address:    0x50
+        pre:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0x01 ]
+        post:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0xFF ]
+    -   name:       qsfpp3
+        bus:        i2c_0
+        dev_type:   qsfpp
+        address:    0x50
+        pre:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0x02 ]
+        post:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0xFF ]
+    -   name:       qsfpp4
+        bus:        i2c_0
+        dev_type:   qsfpp
+        address:    0x50
+        pre:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0x03 ]
+        post:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0xFF ]
+    -   name:       qsfpp5
+        bus:        i2c_0
+        dev_type:   qsfpp
+        address:    0x50
+        pre:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0x04 ]
+        post:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0xFF ]
+    -   name:       qsfpp6
+        bus:        i2c_0
+        dev_type:   qsfpp
+        address:    0x50
+        pre:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0x05 ]
+        post:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0xFF ]
+    -   name:       qsfpp7
+        bus:        i2c_0
+        dev_type:   qsfpp
+        address:    0x50
+        pre:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0x06 ]
+        post:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0xFF ]
+    -   name:       qsfpp8
+        bus:        i2c_0
+        dev_type:   qsfpp
+        address:    0x50
+        pre:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0x07 ]
+        post:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0xFF ]
+    -   name:       qsfpp9
+        bus:        i2c_0
+        dev_type:   qsfpp
+        address:    0x50
+        pre:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0x08 ]
+        post:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0xFF ]
+    -   name:       qsfpp10
+        bus:        i2c_0
+        dev_type:   qsfpp
+        address:    0x50
+        pre:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0x09 ]
+        post:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0xFF ]
+    -   name:       qsfpp11
+        bus:        i2c_0
+        dev_type:   qsfpp
+        address:    0x50
+        pre:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0x0A ]
+        post:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0xFF ]
+    -   name:       qsfpp12
+        bus:        i2c_0
+        dev_type:   qsfpp
+        address:    0x50
+        pre:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0x0B ]
+        post:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0xFF ]
+    -   name:       qsfpp13
+        bus:        i2c_0
+        dev_type:   qsfpp
+        address:    0x50
+        pre:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0x0C ]
+        post:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0xFF ]
+    -   name:       qsfpp14
+        bus:        i2c_0
+        dev_type:   qsfpp
+        address:    0x50
+        pre:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0x0D ]
+        post:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0xFF ]
+    -   name:       qsfpp15
+        bus:        i2c_0
+        dev_type:   qsfpp
+        address:    0x50
+        pre:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0x0E ]
+        post:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0xFF ]
+    -   name:       qsfpp16
+        bus:        i2c_0
+        dev_type:   qsfpp
+        address:    0x50
+        pre:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0x0F ]
+        post:
+            - device:   cpld2
+              register: 0x02
+              data:     [ 0xFF ]
+
+    -   name:       fru_eeprom
+        bus:        i2c_1
+        dev_type:   fru_eeprom
+        address:    0x57
+    -   name:       i2c_mux1
+        bus:        i2c_1
+        dev_type:   i2c_mux
+        address:    0x70
+    -   name:       usbhub
+        bus:        i2c_1
+        dev_type:   usbhub
+        address:    0x2C
+        pre:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x01 ]
+        post:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x00 ]
+    -   name:       psu1
+        bus:        i2c_1
+        dev_type:   power_supply
+        address:    0x38
+        pre:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x02 ]
+        post:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x00 ]
+    -   name:       psu2
+        bus:        i2c_1
+        dev_type:   power_supply
+        address:    0x3B
+        pre:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x04 ]
+        post:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x00 ]
+    -   name:       dcdc
+        bus:        i2c_1
+        dev_type:   dcdc
+        address:    0x08
+        pre:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x08 ]
+        post:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x00 ]
+    -   name:       tmp1
+        bus:        i2c_1
+        dev_type:   lm75
+        address:    0x48
+        pre:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x10 ]
+        post:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x00 ]
+    -   name:       tmp2
+        bus:        i2c_1
+        dev_type:   lm75
+        address:    0x49
+        pre:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x20 ]
+        post:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x00 ]
+    -   name:       tmp3
+        bus:        i2c_1
+        dev_type:   lm75
+        address:    0x4A
+        pre:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x40 ]
+        post:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x00 ]
+    -   name:       tmp4
+        bus:        i2c_1
+        dev_type:   lm75
+        address:    0x4B
+        pre:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x80 ]
+        post:
+            - device:   i2c_mux1
+              register: NONE
+              data:     [ 0x00 ]
+
+init:
+    - device:   cpld2
+      register: 0x02
+      data:     [ 0xff ]
+    - device:   cpld3
+      register: 0x02
+      register: NONE
+      data:     [ 0x00 ]
